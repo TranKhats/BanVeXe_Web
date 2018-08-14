@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewData["Title"] = "ChooseSeat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using BanVeXe_Web.Queries.Ticket
+@model BanVeXe_Web.ViewModel.Ticket.SeatsViewModel
+<div class="pull-left" style="padding-left: 7%">
+    <section id="plane">
+        <!-- LEFT CONTENT -->
+        <img src="~/images/nose.png" alt="" srcset="" id="nose">
+        <table id="plane-map">
+            <tbody>
+                <tr class="position">
+                    <td></td>
+                    <td>A</td>
+                    <td>B</td>
+                    <td class="near-aisle">C</td>
+                    <td class="near-aisle">D</td>
+                    <td>E</td>
+                    <td>F</td>
+                    <td></td>
+                </tr>
+                @{
+                    string className = "seat";
+                }
+                @for (int i = 0; i < Model.Rows; i++)
+                {
+                    <tr class="row-chair">
+                        <td>@i</td>
+                        @for (int j = 0; j < Model.Cols; j++)
+                        {
+                            //if (j == Model.Cols / 2 || j == Model.Cols / 2 + 1)
+                            //{
+                            //    className += " " + "near-aisle";
+                            //}
+                            if (SeatQuery.IsAvailableSeat(i, j, Model))
+                            {
+                                className += " " + "available-seat";
+                            }
+                            else
+                            {
+                                className += " " + "unavailable-seat";
+                            }
+                            <td class="@className" onclick="setChair(this)"></td>
+                            className = "seat";
+                        }
+                    </tr>
+
+                }
+                }
+            </tbody>
+        </table>
+        <img src="~/images/tail.png" alt="" srcset="" id="tail">
+    </section>
+
+</div>
+
+<div class="pull-right" style="width: 55%;">
+    <div id="step-header">
+        <ul id="new-flights">
+            <li class="was-selected">Dates</li>
+            <li class="is-selected">Flights</li>
+            <li class="unselected">Passengers</li>
+            <li class="unselected">Passengers</li>
+            <li class="unselected">Add Ons</li>
+            <li class="unselected">Payment</li>
+            <li class="unselected">Confirmation</li>
+            <li class="unselected">Finish</li>
+        </ul>
+    </div>
+    <section id="choosing-guide">
+        <div id="type-seat">
+            <div class="guide-title">Type of Seat</div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Availiabe seat</td>
+                        <td>Selected seat</td>
+                    </tr>
+                    <tr>
+                        <td>Occupied/Unavailable</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="note">
+            <div class="guide-title">Please Note</div>
+            <div class="note-content">
+                <p>
+                    Guests seated at the emergency exit row MUST meet the following criteria:
+                </p>
+                <ul>
+                    <li>Physically and mentally fit to assist crew in an emergency</li>
+                    <li>Capable of understanding printed/spoken emergency instructions</li>
+                    <li>From 15 to 65 years old</li>
+                    <li>Not in any stage of pregnancy</li>
+                    <li>Not travelling with infants</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <aside id="detailed-booking">
+        @Html.Partial("../Shared/_BookingSummary.cshtml")
+    </aside>
+</div>
+<div class="control">
+    <a asp-controller="Home" asp-action="Index" class="back nav-form">Back</a>
+    <a onclick="addTicket(this)" class="next nav-form">Continue</a>
+</div>

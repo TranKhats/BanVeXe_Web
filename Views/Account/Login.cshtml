@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model BanVeXe_Web.ViewModel.Account.LoginViewModel
+<!--CONTENT-->
+<div id="content">
+    <div class="main-content">
+        <div class="container">
+            <div class="wrap-box">
+                <div class="form-login">
+                    <h1 style="color: red">You can login here</h1>
+                    <form asp-controller="Account" asp-action="Login" method="post" name="login-form">
+                        <div class="form-horizontal">
+                            <a asp-controller="Home" asp-action="Index">
+                                I forget the password
+                            </a>
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="UserName" class=" control-label"></label>
+                                <div>
+                                    <input asp-for="UserName" class="form-control" />
+                                    <span asp-validation-for="UserName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="PassWord" class=" control-label"></label>
+                                <div>
+                                    <input asp-for="PassWord" class="form-control" />
+                                    <span asp-validation-for="PassWord" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div>
+                                    <input asp-for="RememberMe" />
+                                    <label asp-for="RememberMe"></label>
+                                </div>
+                            </div>
+                            <input type="submit" value="Login" name="login" />
+                            <input type="submit" value="Sign up with Facebook" name="signup-facebook" />
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--CONTENT-->

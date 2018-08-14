@@ -1,0 +1,588 @@
+body{
+    background: url(../images/bg_img.jpg) top center no-repeat #000;
+}
+.container{
+    background: white;
+}
+ul li{
+    display: inline-block;
+}
+.nav-form {
+    cursor: pointer;
+    color: #63b5f1 !important;
+    font-weight: 450;
+}
+/* ---------------------------HEADER--------------------------- */
+header .wrap-box{
+    background: url(../images/bg_top.jpg)  repeat-x;
+    width: 100%;
+    margin: auto;
+}
+#top-header{
+    /* background: url(../images/bg_top.jpg)  repeat-x; */
+    overflow: hidden;
+}
+#top-header .pull-left{
+    /* font-size: 20px;
+    padding: 29px 0 29px 29px;
+    font-weight: bold; */
+    overflow: hidden;
+    font-size: 20px;
+    padding: 29px 0 29px 29px;
+    font-weight: bold;
+    min-width: 380px;
+}
+#slogan{
+    margin-top: 60px;
+    margin-left: 10px;
+}
+#top-header .pull-left >*{
+    float: left;
+}
+#top-header .pull-right{
+    margin: 35px;
+}
+header{
+    overflow: hidden;
+}
+header,header ul li a{
+    color: white;
+    font-family: Roboto-Light;
+}
+header .nav-icon li{
+    display: inline-block;
+}
+header .nav-icon li{
+    padding-top: 10px;
+    
+}
+header .nav-icon li a{
+    text-decoration: underline;
+}
+header .nav-icon li a:hover{
+    text-decoration: none;
+    color: white;
+}
+header .nav-icon .nav1 {
+        background: url(../images/img_top1.gif) center 0 no-repeat;
+}
+header .nav-icon .nav2{
+    background: url(../images/img_top2.gif) center 0 no-repeat;
+}
+header .nav-icon .nav3 *{
+    /*background: url(../images/img_top3.gif) center 0 no-repeat;*/
+    float:left;
+    display:block;
+}
+header .nav-icon a{
+    padding: 5px 5px  10px 5px;
+}
+/* ------------------------MENU-----------------------------*/
+nav .menu-list{
+    font-size: larger;
+    font-weight: bold;
+    margin: 0;
+}
+#navigation .menu-list li{
+    display: inline-block;
+    height: 73px;
+    width: 120px;
+    
+}
+#navigation .menu-list li *{
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* padding: 21px; */
+}
+.bg-left:hover{
+    text-decoration: none;
+}
+/* --------MENU for large-------------- */
+.menu-list li .bg-left:focus{
+    background: url(../images/menu_left.gif) left no-repeat;
+    font-size: large;
+}
+.menu-list li .bg-left:hover{
+    background: url(../images/menu_left.gif) left no-repeat;
+    font-size: large;
+}
+a:focus a{
+    color: #a299999c;
+}
+.menu-list li .bg-left:focus .bg-right{
+    background: url(../images/menu_right.gif) right no-repeat;
+    padding-top: 1px;
+}
+.menu-list li .bg-left:hover .bg-right{
+    background: url(../images/menu_right.gif) right no-repeat;
+    padding-top: 1px;
+}
+.bg-center{
+    padding: 21px;
+}
+.menu-list li .bg-left:focus .bg-center{
+    width: 90% !important;
+    margin: auto;
+    background: url(../images/menu_bg.gif) top;
+    color: black;
+    font-weight: bolder;
+}
+.menu-list li .bg-left:hover .bg-center{
+    width: 90% !important;
+    margin: auto;
+    background: url(../images/menu_bg.gif) top;
+    color: black;
+    font-weight: bolder;
+}
+/* ---------------------------------- */
+#navigation{
+    position: relative;
+    top: -5px;
+    height: 73px;
+}
+header button{
+    background: none;
+    border: solid #a299999c 1px;
+    padding: 7px 10px 7px 13px;
+    
+}
+header .nav-btn{
+    position: fixed;
+    top:0;
+    right: 0;
+}
+
+/* -------------------------CONTENT--------------------------- */
+#home .wrap-box{
+    background: url(../images/bg_top_img.jpg);
+    overflow: hidden;
+    padding: 30px;
+}
+#content .left-content{
+    /* width: 27.9%; */
+    width: 280px;
+}
+.left-content .passager{
+    width: 35px;
+}
+.info-flight{
+    height: 22.5px;
+}
+.day{
+    width: 85px;
+}
+/* ------------TabControl--------------- */
+.nav-btn-tab {
+    overflow: hidden;
+}
+
+/* Style the buttons inside the tab */
+.nav-btn-tab button {
+    background: url(../images/tabs.gif) repeat-x;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 32.9%;
+    height: 40px;
+    border-radius: 6px 6px 0 0;
+    transition: 0.3s;
+    font-size: 14px;
+    margin-right: 1px;
+}
+
+.nav-btn-tab button:hover {
+    background: url(../images/tabs_active.gif) repeat-x;
+}
+
+/* Create an active/current tablink class */
+.nav-btn-tab button.active {
+    background: url(../images/tabs_active.gif) repeat-x;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    background: white;
+}
+
+#tab-A{
+
+    display: block;
+    padding: 0;
+}
+.last-content{
+    margin: 0!important;
+}
+/* ------------------------------ */
+.form-action{
+    margin-top: 10px;
+    width: 95%;
+    margin: auto;
+}
+.radio{
+    padding-top: 12px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    background: #e4dcdc69;
+}
+.radio li{
+    width: 40%;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+.radio li input:hover{
+    cursor: pointer;
+}
+.radio li input[type='radio']:checked:before {
+    background:green;
+  }
+.radio li input{
+    width: 11px;
+    height: 11px;
+}
+.section-tab{
+    /* background: white; */
+}
+.form-action table tr{
+    line-height: 2;
+}
+.form-action table tr td{
+    font-size: 13px;
+}
+.main-booking label {
+    margin-bottom: 0;
+}
+.form-action .btn {
+    padding: 2px 3px 2px 3px;
+}
+/* ----------------------------MAIN-CONTAIN-------------------------- */
+.main-content, .main-content .container, .main-content .wrap-box, .main-content article, aside {
+    overflow: hidden;
+}
+.box{
+    border: solid 1px #0000004f;
+    border-radius: 5px;
+    /* padding: 15px; */
+}
+.sub-box{
+    padding: 15px;
+}
+.box .title{
+    background: #f3f3e3;
+    padding: 15px;
+}
+.main-content .wrap-box{
+    /*width: 95%;*/
+    margin: auto;
+    padding: 15px 0 15px 0;
+}
+.sub-box ul li{
+    display: block;
+    font-size: small;
+}
+.sub-box  .depature{
+    float: right;
+}
+/* ----------------------------Center-Contain------------- */
+.sub-boxer > div{
+    float: left;
+}
+.sub-info-boxer,.sub-info-boxer .sub-box{
+    width: 100%;
+   
+}
+.sub-info-boxer .sub-box{
+    margin: auto;
+}
+.img-boxer img {
+    /* padding-left: 50px; */
+    width: 275px;
+    height: 183px;
+}
+.imfo-boxer .img-boxer{
+    width: 90%;
+    margin: auto;
+}
+.detailed-info-boxer p{
+    text-align: justify;
+}
+.imfo-boxer{
+    overflow: hidden;
+    width: 365px;
+    min-width: 280px;
+    float: left;
+    font-size: 14px;
+}
+.detailed-info-box{
+    width: 255px;
+}
+.read-more{
+    display: block;
+    border-radius: 5px;
+    background: url(../images/tabs.gif) repeat-x;
+    color: white;
+    padding: 6px;
+    font-size: 14px;
+    margin-left: 225px;
+    width: 110px;
+    padding-left: 20px;
+}
+.read-more span{
+    background: url(../images/marker_2.gif) right no-repeat;
+    padding-right: 13px;
+    padding-bottom: 5px;
+}
+/* -------------------------------CHOOSE-SEAT------------------------------------- */
+#plane-map .row-chair .available-seat {
+    background: url(../images/Seat-normal.png) no-repeat;
+}
+.unavailable-seat {
+    background: url(../images/Seat-unavailable.png) no-repeat;
+}
+
+.busy-seat{
+    background: url(../images/Seat-selected.png) no-repeat;
+}
+
+#plane-map tr td {
+    width: 40px;
+    height: 40px;
+    padding: 7px 7px 10px 7px;
+}
+
+#nose {
+    margin-left: 45px;
+}
+
+#tail {
+    margin-left: 20px;
+}
+
+.main-content .pull-left > section {
+    float: left;
+}
+
+#note ul li {
+    display: list-item;
+}
+
+#note ul {
+    padding-left: 20px;
+}
+
+#plane {
+    padding: 5px;
+}
+
+#choosing-guide {
+    font-size: 14px;
+    width: 350px;
+    padding: 10px;
+    float: left;
+}
+
+    #choosing-guide .guide-title {
+        padding-left: 120px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        background-color: red;
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+    }
+
+#type-seat .guide-title {
+    font-style: normal;
+}
+
+#note .guide-title {
+    font-style: oblique;
+}
+
+#type-seat table {
+    margin-left: 55px;
+}
+/* ------------------------FOOTER---------------------------- */
+footer .wrap-box{
+    background: url(../images/bg_footer.gif) repeat-x;
+    padding: 25px;
+    overflow: hidden;
+}
+footer .wrap-box > div{
+    float: left;
+    padding-top:15px;
+}
+footer .about-site ul li{
+    display: block;
+    width: 100%;
+}
+/*--------------------------------LOGIN-------------------------------------------*/
+.form-login{
+    width: 310px;
+    margin: auto;
+}
+
+/*--------------------------------FLIGHT-----------------------------------------*/
+#new-flights {
+    padding: 5px 20px 5px 20px;
+    display: flex;
+}
+
+#step-header {
+    background: #cfe2ff;
+}
+
+#new-flights li {
+    padding: 10px;
+    display: inline-block;
+}
+
+.grid-flight td {
+    font-size: 13px;
+}
+
+#flight-list th{
+
+}
+
+#flight-list th, #flight-list td {
+    width: 150px;
+    padding: 5px;
+}
+
+.was-selected, .is-selected {
+    background: red;
+    color: yellow;
+}
+/* ------------------------------CUSTOMER--------------------------------------- */
+#custom-info table tr td label {
+    width: 100%;
+}
+
+#custom-info .control{
+    margin-top: 25px;
+}
+
+.control .back{
+    float: left;
+}
+
+.control .next {
+    float: right;
+}
+
+.detailed-summary{
+    font-weight: bold;
+}
+
+#detailed-booking {
+    font-size: 13.5px;
+    width: 200px;
+    padding: 10px;
+    background: #ffff0091;
+    /*margin-top: 74px;*/
+    margin-top: 33px;
+    /*float: right;*/
+}
+
+#main-booking {
+    width: 65%;
+    float: left;
+    margin-right: 70px;
+}
+
+#custom-info table tr {
+    /* width: 80%; */
+}
+/* -----------------------------REPONSIVE-DEVICES------------------------------- */
+/* @media only screen and (max-width: 1024px){
+    .container{
+        background: red!important;
+    }
+} */
+
+
+@media only screen and (max-width: 1024px) {
+    .main-content .container > .wrap-box .pull-left {
+        width: 100%;
+    }
+
+    .container {
+        /* background: red!important; */
+    }
+
+    #home .wrap-box {
+        padding: 25px;
+    }
+
+    .main-content .pull-right {
+        width: 100% !important;
+    }
+
+    .imfo-boxer {
+        width: 293px;
+    }
+
+    .read-more {
+        margin-left: 160px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #main-booking {
+        /* width: 67% !important; */
+        width: 70% !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main-content .pull-right {
+        width: 58% !important;
+    }
+
+    #main-booking {
+        /* width: 67% !important; */
+        width: 100% !important;
+    }
+
+    .menu-list li {
+        font-size: 13px;
+        height: 30px !important;
+        width: 100% !important;
+    }
+
+    .menu-list * {
+        background: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-content aside {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* .main-content .container > .wrap-box .pull-left{
+        width: 100%;
+    } */
+    .main-content .pull-right {
+        width: 100% !important;
+    }
+
+    .imfo-boxer {
+        width: 100%;
+    }
+
+    .main-content .container > .wrap-box .pull-right {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+}

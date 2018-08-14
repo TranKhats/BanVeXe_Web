@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Pagination";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@model IEnumerable<BanVeXe_Web.Models.Account>
+
+<h2>Pagination</h2>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li style="display:block">UserName:@item.Username PassWord:@item.Password</li>
+    }
+</ul>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Pagination", new { page }))

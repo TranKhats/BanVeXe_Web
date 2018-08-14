@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewData["Title"] = "FindFlights";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using  BanVeXe_Web.ViewModel
+@model SearchFlightViewModel
+
+@Html.Partial("../Shared/_SuggestionPlace.cshtml")
+<div class="pull-right" style="width: 70%;">
+    <div id="step-header">
+        <ul id="new-flights">
+            <li class="was-selected">Dates</li>
+            <li class="is-selected" data-adult="@ViewBag.Summary.Adult" data-children="@ViewBag.Summary.Child" data-tax="@ViewBag.Summary.Tax">Flights</li>
+            <li class="unselected">Passengers</li>
+            <li class="unselected">Add Ons</li>
+            <li class="unselected">Payment</li>
+            <li class="unselected">Confirmation</li>
+            <li class="unselected">Finish</li>
+        </ul>
+    </div>
+    <div id="main-booking">
+        <form asp-controller="Ticket" asp-action="ChooseFlight" method="post" id="choosing-ticket-form">
+            @{
+                bool dep = Model.DepartureFlights != null && Model.DepartureFlights.Count > 0;
+                bool ret = Model.ReturnFlights != null && Model.ReturnFlights.Count > 0;
+            }
+            @if (Model == null || !(dep || ret))
+            {
+                <h5>There is no flight</h5>
+            }
+            else
+            {
+                if (dep)
+                {
+                    <h5>Select the flight in @Model.DepartureFlights[0].Starting.ToString("dd/MM/yyyy")</h5>
+                    <div id="flight-list">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Flight date</th>
+                                    <th>Depature</th>
+                                    <th>Arrives</th>
+                                    <th>Flight detail</th>
+                                    @foreach (var item in Model.DepartureFlights)
+                                    {
+                                        @foreach (var _class in item.Classes)
+                                        {
+                                            <th>@_class.Name</th>
+                                        }
+                                    }
+                                </tr>
+                                @foreach (var item in Model.DepartureFlights)
+                                {
+                                    <tr class="grid-flight">
+                                        <td class="flight-date">@item.Starting.ToShortTimeString()</td>
+                                        <td class="depature">@item.Starting.ToShortTimeString() <br /> @item.Departure</td>
+                                        <td class="arrive">@item.Ending.ToShortTimeString() <br /> @item.Destination</td>
+                                        <td class="id-flight">@item.IdFlight</td>
+                                        @foreach (var _class in item.Classes)
+                                        {
+                                            <td class="price">
+                                                <input type="radio" asp-for="@Model.IdClass" value="@_class.IdType" class="depature-option" onclick="handleCheckedFlight(this)" data-type="deparFlight" />
+                                                <span data-money="@_class.Price">@String.Format("{0:0}", _class.Price)&nbsp; VND</span>
+                                            </td>
+                                        }
+                                        @*<input type="radio" asp-for="@Model.DeparId" value="@item.IdFlight" class="depature-option" onclick="handleCheckedFlight(this)" data-type="deparFlight" />
+                                            <span data-money="@item.Price">@String.Format("{0:0}", item.Price)&nbsp; VND</span>*@
+                                        <td>
+                                            <input type="hidden" asp-for="@Model.DeparId" value="@item.IdFlight" />
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+                if (ret)
+                {
+                    <h5>Select the flight in @Model.ReturnFlights[0].Starting.ToString(("dd/MM/yyyy"))</h5>
+                    <div id="flight-list">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Flight date</th>
+                                    <th>Depature</th>
+                                    <th>Arrives</th>
+                                    <th>Flight detail</th>
+                                    <th>Price</th>
+                                </tr>
+                                @foreach (var item in Model.ReturnFlights)
+                                {
+                                    <tr class="grid-flight">
+                                        <td class="flight-date">@item.Starting.ToShortTimeString()</td>
+                                        <td class="depature">@item.Starting.ToShortTimeString() <br /> @item.Departure</td>
+                                        <td class="arrive">@item.Ending.ToShortTimeString() <br /> @item.Destination</td>
+                                        <td class="id-flight">@item.IdFlight</td>
+                                        <td class="price">
+                                            <input type="radio" asp-for="@Model.ReturnId" value="@item.IdFlight" class="return-option" onclick="handleCheckedFlight(this)" data-type="returnFlight" />
+                                            @*<span data-money="@item.Price">@String.Format("{0:0}", item.Price)&nbsp; VND</span>*@
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+            }
+            <div class="control">
+                <a asp-controller="Home" asp-action="Index" class="back nav-form">Back</a>
+                <a onclick="addTicket(this)" class="next nav-form">Continue</a>
+            </div>
+        </form>
+    </div>
+    <aside id="detailed-booking">
+        @Html.Partial("../Shared/_BookingSummary.cshtml")
+    </aside>
+</div>
+
+

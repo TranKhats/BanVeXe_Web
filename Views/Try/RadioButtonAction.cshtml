@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "RadioButtonAction";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>RadioButtonAction</h2>
+@using BanVeXe_Web.ViewModel
+@model  AppDTO
+<form asp-action="RadioButtonAction1" asp-controller="Try" method="post">
+    <div class="col-md-10">
+        @foreach (var item in @ViewBag.Roles)
+        {
+            <input asp-for="Role" type="radio" value="@item.Id" />@item.RoleName
+        }
+    </div>
+    <button type="submit">Submit</button>
+</form>

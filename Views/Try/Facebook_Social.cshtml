@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Facebook_Social";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-------Comment----->
+<h2>Facebook_Social</h2>
+
+Step 2: Include the JavaScript SDK on your page once, ideally right after the opening body tag.
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=526660241099759&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+Step 3: Place this code wherever you want the plugin to appear on your page.
+<div class="fb-comments" data-href="https://www.youtube.com/watch?v=eVlNJ1X_YXQ" data-width="100" data-numposts="5"></div>
+

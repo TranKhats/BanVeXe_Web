@@ -1,0 +1,68 @@
+﻿@model BanVeXe_Web.ViewModel.Ticket.BookingTiketFormViewModel
+
+<div class="form-action">
+    <form asp-action="FindFlights" asp-controller="Ticket" class="main-booking">
+        <div class="radio">
+            <ul>
+                <li>
+                    <input type="radio" asp-for="IsReturn" value="false">
+                    <span>One way</span>
+                </li>
+                <li>
+                    <input type="radio" asp-for="IsReturn" value="true">
+                    <span>Return</span>
+                </li>
+            </ul>
+        </div>
+
+        <table>
+            <tr>
+                <td><label asp-for="IdDeparture"></label></td>
+                <td>
+                    <select asp-for="IdDeparture" asp-items="Model.Departures" class="depatures"></select>
+                </td>
+            </tr>
+            <tr>
+                <td><label asp-for="IdDestination"></label></td>
+                <td>
+                    <select asp-for="IdDestination" asp-items="Model.Destinations" class="destinations"></select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="Start"></label>
+                </td>
+                <td>
+                    <input type="date" asp-for="Start" class="info-flight day starting">
+                </td>
+            </tr>
+            <tr>
+                <td><label asp-for="End"></label></td>
+                <td>
+                    <input type="date" asp-for="End" class="info-flight day ending" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td><label asp-for="Adult"></label></td>
+                <td>
+                    <input type="number" min="1" max="5" asp-for="Adult" class="info-flight passager">
+                </td>
+            </tr>
+            <tr>
+                <td><label asp-for="Child"></label></td>
+                <td>
+                    <input type="number" min="0" max="5" asp-for="Child" class="info-flight passager">
+                    <span>(0-11 years)</span>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>

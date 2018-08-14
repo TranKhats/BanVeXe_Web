@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "FistAction";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>FistAction</h2>
+<a onclick="redirect()" class="next">Rederect</a>
+<script>
+    function redirect() {
+        $.ajax({
+            type: 'post',
+            url: 'DestinationAction',
+            success: function () {
+                console.log('successfully!');
+            },
+            error: function () {
+                console.log('Error!!!');
+            }
+        });
+    }
+</script>
+

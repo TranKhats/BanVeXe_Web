@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "ATagForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model BanVeXe_Web.ViewModel.TryViewModel
+<h2>ATagForm</h2>
+
+<form asp-action="AtagForm2" asp-controller="Try" id="TrySubmit1" method="post">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
+    <a class="button" href="javascript:formSubmit();">Submit</a>
+</form>
+<script>
+    function formSubmit() {
+        $('#TrySubmit1').submit();
+    }
+</script>

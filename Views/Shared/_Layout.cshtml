@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/add_fonts.css" />
+    <!-- -----------------------add font------------------- -->
+
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/index.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/fadeSlider.css">
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/main.js"></script>
+    <script src="~/lib/jquery.nivo.slider.pack.js"></script>
+
+    <script src="~/js/site.js"></script>
+    <script src="~/js/JavaScriptLib.js"></script>
+
+    @RenderSection("BookTicketJS", required: false)
+    <title>@ViewData["Title"]</title>
+</head>
+
+<body>
+    <header>
+        <!-- header -->
+        <div id="header">
+            <div class="container">
+                <div class="wrap-box">
+                    <div id="top-header">
+                        <div class="pull-left">
+                            <a href="#">
+                                <img src="~/images/logo.png" alt="logo">
+                            </a>
+                            <div id="slogan">
+                                <span>Fast, Frequent &amp; Safe Flights</span>
+                            </div>
+                        </div>
+                        <div class="pull-right">
+                            <ul class="nav-icon">
+                                <li class="nav1">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="nav2">
+                                    <a href="#">Sitemap</a>
+                                </li>
+                                <li class="nav3">
+                                    <span><i class="fa fa-sign-in" aria-hidden="true"></i></span>
+                                    <a asp-controller="Account" asp-action="Login">Login</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-btn">
+                        <button>
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </button>
+                        <div class="nav-toggle">
+                            <button class="nav-toggle-btn main-btn icon-btn">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- / Mobile nav toggle -->
+                    <!-- NAVIGATION -->
+
+                    @Html.Partial("_Menu.cshtml")
+
+                    <!-- /NAVIGATION -->
+
+                </div>
+            </div>
+        </div>
+        <!-- header -->
+        <!-- container -->
+    </header>
+    <!-- /HEADER -->
+    <!-- HOME -->
+    <div id="content">
+        <!------Home-Section----------->
+        @RenderSection("Home", required: false)
+        <!-----Home-Section----------->
+    </div>
+    <!--MAIN-CONTENT---->
+    <div class="main-content">
+        <div class="container">
+            <div class="wrap-box">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <!--MAIN-CONTENT---->
+    <footer>
+        <div class="container">
+            <div class="wrap-box">
+                <div class="connection">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="~/images/icon1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="~/images/icon2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="~/images/icon3.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="~/images/icon4.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="~/images/icon5.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-site">
+                    <ul>
+                        <li>Copyright &#169; Domain Name All Rights Reserved</li>
+                        <li>Design by TemplateMonster.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /FOOTER -->
+
+    <script src="~/lib/reponsive_menu.js"></script>
+    <script type="text/javascript">
+
+        $(window).on('load', function () {
+            $('#slider').nivoSlider({
+                effect: 'fade', //Specify sets like: 'fold,fade,sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpDown, sliceUpDownLeft'
+                slices: 15,
+                animSpeed: 500,
+                pauseTime: 6000,
+                startSlide: 0, //Set starting Slide (0 index)
+                directionNav: false, //Next & Prev
+                directionNavHide: false, //Only show on hover
+                controlNav: false, //1,2,3...
+                controlNavThumbs: false, //Use thumbnails for Control Nav
+                controlNavThumbsFromRel: false, //Use image rel for thumbs
+                controlNavThumbsSearch: '.jpg', //Replace this with...
+                controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+                keyboardNav: true, //Use left & right arrows
+                pauseOnHover: true, //Stop animation while hovering
+                manualAdvance: false, //Force manual transitions
+                captionOpacity: 1, //Universal caption opacity
+                beforeChange: function () { },
+                afterChange: function () { },
+                slideshowEnd: function () { } //Triggers after all slides have been shown
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>

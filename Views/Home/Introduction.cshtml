@@ -1,0 +1,41 @@
+﻿@using BanVeXe_Web.Queries.Route
+@using BanVeXe_Web.ViewModel.Route
+@{
+    var lst = PlaceQuerries.getAllIntroductions();
+}
+<h1>This is View having Quick View about the Places</h1>
+<aside>
+    @{
+        foreach (PlaceViewModel item in lst)
+        {
+            <div class="imfo-boxer">
+                <h3>About our Place</h3>
+                <div class="sub-info-boxer">
+                    <div class="img-boxer">
+                        <img src="..@item.linkImg">
+                    </div>
+                    <div class="sub-box detailed-info-box">
+                        <div class="name">
+                            <strong>From @item.placeName</strong>
+                        </div>
+                        <div class="detailed-info-boxer">
+                            <p>
+                                @item.introduction.Substring(0, 200);
+                            </p>
+                            @{
+                                if (item.introduction.Length > 200)
+                                {
+                                    <a href="#" class="read-more">
+                                        <span>Read more</span>
+                                    </a>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</aside>
+<i class="fa fa-sign-in" aria-hidden="true"></i>
+

@@ -1,0 +1,239 @@
+﻿@*@ViewData["Title"] = "Home";*@
+@using BanVeXe_Web.ViewModel.Home
+
+@model BanVeXe_Web.ViewModel.Ticket.BookingTiketFormViewModel
+
+@section BookTicketJS{
+    <script type="text/javascript" src="~/js/site.js"></script>
+    <link rel="stylesheet" href="~/lib/jquery-ui/themes/base/jquery-ui.min.css">
+    <script src="~/lib/jquery-ui/jquery-ui.min.js"></script>
+}
+
+
+@section Home{
+    <div id="home">
+        <div class="container">
+            <div class="wrap-box">
+                <div class="left-content pull-left">
+                    <section class="section-tab">
+                        <div class="nav-btn-tab">
+                            <button class="tablinks" data-val="tab-A">London</button>
+                            <button class="tablinks" data-val="tab-B">Paris</button>
+                            <button class="tablinks" data-val="tab-C">Tokyo</button>
+                        </div>
+                        <div id="tab-A" class="tabcontent">
+                            @{
+                                Html.RenderPartial("../Ticket/BookingForm.cshtml", Model);
+                            }
+
+                        </div>
+                        <div id="tab-B" class="tabcontent">
+                            <div class="radio">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="a" id="">
+                                        <span>Standard</span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="a" id="">
+                                        <span>Worldap</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="form-action">
+                                <form action="" method="post">
+                                    <table>
+                                        <tr>
+                                            <td>From</td>
+                                            <td>
+                                                <input type="text" name="" class="info-flight ">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>To</td>
+                                            <td>
+                                                <input type="text" name="" class="info-flight ">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Outbout Flight</td>
+                                            <td>
+                                                <input type="text" name="" class="info-flight day">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Return Flight</td>
+                                            <td>
+                                                <input type="text" name="" class="info-flight day">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Adults</td>
+                                            <td>
+                                                <input type="text" name="" class="info-flight passager">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Chidrent</td>
+                                            <td>
+                                                <input type="text" name="" class="info-flight passager">
+                                                <span>(0-11 years)</span>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div id="tab-C" class="tabcontent last-content">
+                            <div class="radio">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="a" id="">
+                                        <span>Standard</span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="a" id="">
+                                        <span>Worldap</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="form-action">
+                                <form action="" method="post">
+                                    <table>
+                                        <tr>
+                                            <td>From</td>
+                                            <td>
+                                                <input type="text" name="" class="info-flight ">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>To</td>
+                                            <td>
+                                                <input type="text" name="" class="info-flight ">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Outbout Flight</td>
+                                            <td>
+                                                <input type="text" name="" class="info-flight day">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Return Flight</td>
+                                            <td>
+                                                <input type="text" name="" class="info-flight day">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Adults</td>
+                                            <td>
+                                                <input type="text" name="" class="info-flight passager">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Chidrent</td>
+                                            <td>
+                                                <input type="text" name="" class="info-flight passager">
+                                                <span>(0-11 years)</span>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+                <div class="pull-right">
+                    <section class="pull-right">
+                        <div id="slider">
+                            <img src="~/images/banner1.jpg" alt="">
+                            <img src="~/images/banner2.jpg" alt="">
+                            <img src="~/images/banner3.jpg" alt="">
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+@Html.Partial("../Shared/_SuggestionPlace.cshtml")
+<div class="pull-right" style="width: 70%;">
+    <aside>
+        <div class="imfo-boxer">
+            <h3>About our Place</h3>
+            <div class="sub-info-boxer">
+                <div class="img-boxer">
+                    <img src="images/page2_img1.jpg">
+                </div>
+                <div class="sub-box detailed-info-box">
+                    <div class="name">
+                        <strong>From Brimingham</strong>
+                    </div>
+                    <div class="detailed-info-boxer">
+                        <p>
+                            With PSD source files and without them. PSD source files are available for free for the registered members of
+                            Templates.com. The basic package (without PSD source files) is available for anyone without registration).
+                        </p>
+                        <a href="#" class="read-more">
+                            <span>Read more</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="imfo-boxer">
+            <h3>About our Place</h3>
+            <div class="sub-info-boxer">
+                <div class="img-boxer">
+                    <img src="images/page2_img1.jpg">
+                </div>
+                <div class="sub-box detailed-info-box">
+                    <div class="name">
+                        <strong>From Brimingham</strong>
+                    </div>
+                    <div class="detailed-info-boxer">
+                        <p>
+                            With PSD source files and without them. PSD source files are available for free for the registered members of
+                            Templates.com. The basic package (without PSD source files) is available for anyone without registration).
+                        </p>
+                        <a href="#" class="read-more">
+                            <span>Read more</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="imfo-boxer">
+            <h3>About our Place</h3>
+            <div class="sub-info-boxer">
+                <div class="img-boxer">
+                    <img src="images/page2_img1.jpg">
+                </div>
+                <div class="sub-box detailed-info-box">
+                    <div class="name">
+                        <strong>From Brimingham</strong>
+                    </div>
+                    <div class="detailed-info-boxer">
+                        <p>
+                            With PSD source files and without them. PSD source files are available for free for the registered members of
+                            Templates.com. The basic package (without PSD source files) is available for anyone without registration).
+                        </p>
+                        <a href="#" class="read-more">
+                            <span>Read more</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+</div>
+<script>
+    $(function () {
+        //$(".info-flight").datepicker({ dateFormat: 'dd-mm-yy', minDate: 'today' });
+    });
+</script>

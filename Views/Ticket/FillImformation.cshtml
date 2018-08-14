@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewData["Title"] = "Custom Imformation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model BanVeXe_Web.ViewModel.Customer.CustomerFormViewModel
+
+@Html.Partial("../Shared/_SuggestionPlace.cshtml")
+<div class="pull-right" style="width: 70%;">
+    <div id="step-header">
+        <ul id="new-flights">
+            <li class="was-selected">Dates</li>
+            <li class="is-selected">Flights</li>
+            <li class="unselected">Passengers</li>
+            <li class="unselected">Passengers</li>
+            <li class="unselected">Add Ons</li>
+            <li class="unselected">Payment</li>
+            <li class="unselected">Confirmation</li>
+            <li class="unselected">Finish</li>
+        </ul>
+    </div>
+    <div id="main-booking">
+        <form asp-controller="Ticket" asp-action="RegisterImformation" method="post" id="CustomInfo">
+            <h5>Please fill in the form:</h5>
+            <div id="custom-info">
+                <table>
+                    <tr>
+                        <td>
+                            <label asp-for="Sex"></label>
+                            <select asp-for="Sex" asp-items="Model.Sexes"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label asp-for="FamilyName"></label>
+                            <input asp-for="FamilyName" />
+                        </td>
+                        <td>
+                            <label asp-for="MiddleName"></label>
+                            <input asp-for="MiddleName" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label asp-for="Address"></label>
+                            <input asp-for="Address" />
+                        </td>
+                        <td>
+                            <label asp-for="City"></label>
+                            <input asp-for="City" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label asp-for="Region"></label>
+                            <input asp-for="Region" />
+                        </td>
+                        <td>
+                            <label asp-for="Province"></label>
+                            <input asp-for="Province" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label asp-for="Email"></label>
+                            <input asp-for="Email" />
+                        </td>
+                        <td>
+                            <label asp-for="Day"></label>
+                            <select asp-for="Day" asp-items="Model.Days"></select>
+                            <select asp-for="Month" asp-items="Model.Months"></select>
+                            <select asp-for="Year" asp-items="Model.Years"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label asp-for="PassportNumber"></label>
+                            <input asp-for="PassportNumber" />
+                        </td>
+                        <td>
+                            <label asp-for="ExpDay"></label>
+                            <input type="date" asp-for="ExpDay" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label asp-for="Phone"></label>
+                            <input asp-for="Phone" />
+                        </td>
+                        <td>
+                            <label asp-for="Nationality"></label>
+                            <select asp-for="Nationality" asp-items="Model.Nationalities"></select>
+                        </td>
+                    </tr>
+                </table>
+                <!-- </form> -->
+                <div class="control">
+                    <a onclick="submitFormCustom('back')" class="back nav-form">Back</a>
+                    <a onclick="submitFormCustom('continue')" class="next nav-form">Continue</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <aside id="detailed-booking">
+        <!---Booking sumary partial View is in here-->
+        @Html.Partial("../Shared/_BookingSummary.cshtml")
+    </aside>
+</div>
+

@@ -1,0 +1,48 @@
+E:\ASP.NET\Project\ASP.net\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.deps.json
+E:\ASP.NET\Project\ASP.net\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.runtimeconfig.json
+E:\ASP.NET\Project\ASP.net\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.runtimeconfig.dev.json
+E:\ASP.NET\Project\ASP.net\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.dll
+E:\ASP.NET\Project\ASP.net\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.pdb
+E:\ASP.NET\Project\ASP.net\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.csprojAssemblyReference.cache
+E:\ASP.NET\Project\ASP.net\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.csproj.CoreCompileInputs.cache
+E:\ASP.NET\Project\ASP.net\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.AssemblyInfoInputs.cache
+E:\ASP.NET\Project\ASP.net\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.AssemblyInfo.cs
+E:\ASP.NET\Project\ASP.net\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.dll
+E:\ASP.NET\Project\ASP.net\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.pdb
+E:\ASP.NET\Project\ASP.net\BanVeXe_Web\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\tranthibay\Desktop\Visual 2017\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.deps.json
+C:\Users\tranthibay\Desktop\Visual 2017\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.runtimeconfig.json
+C:\Users\tranthibay\Desktop\Visual 2017\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.runtimeconfig.dev.json
+C:\Users\tranthibay\Desktop\Visual 2017\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.dll
+C:\Users\tranthibay\Desktop\Visual 2017\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.pdb
+C:\Users\tranthibay\Desktop\Visual 2017\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.csprojAssemblyReference.cache
+C:\Users\tranthibay\Desktop\Visual 2017\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.csproj.CoreCompileInputs.cache
+C:\Users\tranthibay\Desktop\Visual 2017\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.AssemblyInfoInputs.cache
+C:\Users\tranthibay\Desktop\Visual 2017\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.AssemblyInfo.cs
+C:\Users\tranthibay\Desktop\Visual 2017\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.dll
+C:\Users\tranthibay\Desktop\Visual 2017\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.pdb
+C:\Users\tranthibay\Desktop\Visual 2017\1\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.deps.json
+C:\Users\tranthibay\Desktop\Visual 2017\1\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.runtimeconfig.json
+C:\Users\tranthibay\Desktop\Visual 2017\1\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.runtimeconfig.dev.json
+C:\Users\tranthibay\Desktop\Visual 2017\1\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.dll
+C:\Users\tranthibay\Desktop\Visual 2017\1\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.pdb
+C:\Users\tranthibay\Desktop\Visual 2017\1\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.csprojAssemblyReference.cache
+C:\Users\tranthibay\Desktop\Visual 2017\1\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.csproj.CoreCompileInputs.cache
+C:\Users\tranthibay\Desktop\Visual 2017\1\BanVeXe_Web\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\tranthibay\Desktop\Visual 2017\1\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.AssemblyInfoInputs.cache
+C:\Users\tranthibay\Desktop\Visual 2017\1\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.AssemblyInfo.cs
+C:\Users\tranthibay\Desktop\Visual 2017\1\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.dll
+C:\Users\tranthibay\Desktop\Visual 2017\1\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.pdb
+C:\Users\tranthibay\Desktop\Visual 2017\BanVeXe_Web\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+E:\oldDesktop\Visual 2017\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.deps.json
+E:\oldDesktop\Visual 2017\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.runtimeconfig.json
+E:\oldDesktop\Visual 2017\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.runtimeconfig.dev.json
+E:\oldDesktop\Visual 2017\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.dll
+E:\oldDesktop\Visual 2017\BanVeXe_Web\bin\Debug\netcoreapp2.0\BanVeXe_Web.pdb
+E:\oldDesktop\Visual 2017\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.csprojAssemblyReference.cache
+E:\oldDesktop\Visual 2017\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.csproj.CoreCompileInputs.cache
+E:\oldDesktop\Visual 2017\BanVeXe_Web\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+E:\oldDesktop\Visual 2017\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.AssemblyInfoInputs.cache
+E:\oldDesktop\Visual 2017\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.AssemblyInfo.cs
+E:\oldDesktop\Visual 2017\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.dll
+E:\oldDesktop\Visual 2017\BanVeXe_Web\obj\Debug\netcoreapp2.0\BanVeXe_Web.pdb

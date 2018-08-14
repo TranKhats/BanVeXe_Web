@@ -1,0 +1,135 @@
+﻿<div id="title-booking">
+    <h5>Booking Summary</h5>
+</div>
+<div>
+    @{
+        string name = "";
+        decimal price = 0;
+        decimal tax = 0;
+        var customerDisplay = "none";
+        var display = "none";
+        if (ViewBag.Summary.Customer != null)
+        {
+            customerDisplay = "normal";
+            string sex="Miss";
+            if (ViewBag.Summary.Customer.Sex=="Male") {
+                sex = "Mr";
+            }
+            name = sex + " " + ViewBag.Summary.Customer.Name;
+        }
+        if (ViewBag.Summary.DeparFlight != null)
+        {
+            price = ViewBag.Summary.Price;
+            tax = ViewBag.Summary.Tax;
+            display = "normal";
+        }
+    }
+    <table id="booked-depar-flight">
+        <thead>
+            <tr>
+                <td>Departure Flights</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="display: @customerDisplay">
+                <td>
+                    <span class="detailed-summary">Passenger:</span>
+                    <span id="dep-booked-price">@name</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="detailed-summary">From:</span>
+                    <span>@ViewBag.Summary.Departure.PlaceName</span>
+                </td>
+            <tr>
+                <td>
+                    <span class="detailed-summary">To:</span>
+                    <span>@ViewBag.Summary.Destination.PlaceName</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="detailed-summary">Departure Date:</span>
+                    <span id="dep-booked-date">
+                        @ViewBag.Summary.DeparDate.ToShortDateString()
+                    </span>
+                </td>
+            </tr>
+
+
+            <tr style="display: @display">
+                <td>
+                    <span class="detailed-summary">Price:</span>
+                    <span id="dep-booked-price">@price&nbsp;VND</span>
+                </td>
+            </tr>
+            <tr style="display: @display">
+                <td>
+                    <span class="detailed-summary">Tax:</span>
+                    <span id="dep-booked-tax">@tax&nbsp;VND</span>
+                </td>
+            </tr>
+            @*}*@
+
+        </tbody>
+    </table>
+    @if (ViewBag.Summary.IsReturn)
+    {
+        <table id="booked-return-flight">
+            <thead>
+                <tr>
+                    <td>Return Flights</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span class="detailed-summary">From:</span>
+                        <span>@ViewBag.Summary.Destination.PlaceName</span>
+                    </td>
+                <tr>
+                    <td>
+                        <span class="detailed-summary">To:</span>
+                        <span>@ViewBag.Summary.Departure.PlaceName</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="detailed-summary">Departure Date:</span>
+                        <span id="ret-booked-date">
+                            @ViewBag.Summary.DeparDate.ToShortDateString()
+                        </span>
+                    </td>
+                </tr>
+                @{
+                    decimal RetPrice = 0;
+                    decimal RetTax = 0;
+                    var RetDisplay = "none";
+                    if (ViewBag.Summary.ReturnFlight != null)
+                    {
+                        RetPrice = ViewBag.Summary.Price;
+                        RetTax = ViewBag.Summary.Tax;
+                        RetDisplay = "normal";
+                    }
+                }
+                <tr style="display: @RetDisplay">
+                    <td>
+                        <span class="detailed-summary">Price:</span>
+                        <span id="ret-booked-price">@RetPrice&nbsp;VND</span>
+                    </td>
+                </tr>
+                <tr style="display: @RetDisplay">
+                    <td>
+                        <span class="detailed-summary">Tax:</span>
+                        <span id="ret-booked-tax">@RetTax&nbsp;VND</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    }
+    <div>
+        <span class="detailed-summary">Total:</span>
+        <span id="dep-booked-total">@ViewBag.Summary.Total&nbsp;VND</span>
+    </div>
+</div>
